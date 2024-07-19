@@ -1,6 +1,7 @@
 import React from "react";
 import BoxItem from "./BoxItem";
 import icon from "@/utils/icon";
+import Image from "next/image";
 
 const { PiNoteBold, FaSearch, FaDiscourse } = icon;
 
@@ -102,7 +103,18 @@ const BodyTextItem: React.FC<BodyTextItemProps> = ({ character, title }) => {
         </div>
         <div className="lg:flex gap-4 my-10">
           {title
-            ? data2.map((item) => <BoxItem key={item.headerTitle} {...item} title={title} />)
+            ? data2.map((item) => (
+                <div className="flex flex-col items-center  text-center gap-4 ">
+                  <div className=" flex items-center justify-center">
+                    <Image src={item.image} alt="" width={300} height={300} />
+                  </div>
+
+                  <span className={`${title && "text-primary"} font-semibold`}>
+                    {item.headerTitle}
+                  </span>
+                  <span className="text-sm mb-4">{item.description}</span>
+                </div>
+              ))
             : datas.map((item) => <BoxItem key={item.headerTitle} {...item} title={title} />)}
         </div>
       </div>
