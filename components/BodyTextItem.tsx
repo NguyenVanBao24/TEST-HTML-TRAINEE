@@ -104,7 +104,7 @@ const BodyTextItem: React.FC<BodyTextItemProps> = ({ character, title }) => {
         <div className="lg:flex gap-4 my-10">
           {title
             ? data2.map((item) => (
-                <div className="flex flex-col items-center  text-center gap-4 ">
+                <div key={item.id} className="flex flex-col items-center  text-center gap-4 ">
                   <div className=" flex items-center justify-center">
                     <Image src={item.image} alt="" width={300} height={300} />
                   </div>
