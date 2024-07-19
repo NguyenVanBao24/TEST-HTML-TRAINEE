@@ -9,7 +9,6 @@ interface BoxItemProps {
   title?: string;
 }
 const BoxItem: React.FC<BoxItemProps> = ({ image: ImageI, headerTitle, description, title }) => {
-  console.log("ok", ImageI);
   return (
     <div className="flex flex-col items-center  text-center gap-4 ">
       {title ? (

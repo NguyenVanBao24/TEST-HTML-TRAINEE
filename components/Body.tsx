@@ -35,7 +35,10 @@ const Body = () => {
         {data.map((item) => {
           if (item.id % 2 === 1) {
             return (
-              <div className="text-white lg:flex items-center justify-center w-full h-[500px]">
+              <div
+                key={item.id}
+                className="text-white lg:flex items-center justify-center w-full h-[500px]"
+              >
                 <div className="lg:w-1/2 px-20 py-20 bg-[#222222] h-full flex flex-col items-center justify-center">
                   <div className="flex flex-col ">
                     <div className="mb-2">

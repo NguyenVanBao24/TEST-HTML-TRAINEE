@@ -89,7 +89,7 @@ const BodyTextItem: React.FC<BodyTextItemProps> = ({ character, title }) => {
           {data.map((item) => {
             if (item.character == character) {
               return (
-                <div className="flex justify-center items-center">
+                <div key={item.character} className="flex justify-center items-center">
                   <span className="relative text-[12rem] opacity-30 font-semibold">
                     {item.character}
                   </span>
