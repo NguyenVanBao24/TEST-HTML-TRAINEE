@@ -101,9 +101,7 @@ const BodyTextItem: React.FC<BodyTextItemProps> = ({ character, title }) => {
           {title && <span className="text-2xl ">{title}</span>}
         </div>
         <div className="lg:flex gap-4 my-10">
-          {title
-            ? data2.map((item) => <BoxItem key={item.headerTitle} {...item} title={title} />)
-            : datas.map((item) => <BoxItem key={item.headerTitle} {...item} title={title} />)}
+          {title && datas.map((item) => <BoxItem key={item.headerTitle} {...item} title={title} />)}
         </div>
       </div>
     </div>

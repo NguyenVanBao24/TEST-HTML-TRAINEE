@@ -3,7 +3,7 @@ import React from "react";
 import { IconType } from "react-icons";
 
 interface BoxItemProps {
-  image?: IconType;
+  image: IconType;
   headerTitle?: string;
   description?: string;
   title?: string;
