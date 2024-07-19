@@ -63,7 +63,10 @@ const Body = () => {
             );
           } else
             return (
-              <div className="text-white lg:flex items-center justify-center w-full h-[500px]">
+              <div
+                key={item.id}
+                className="text-white lg:flex items-center justify-center w-full h-[500px]"
+              >
                 <div className="lg:w-1/2 ">
                   <Image
                     alt=""
